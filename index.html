@@ -127,26 +127,28 @@
                                 <h2 class="fw-bolder">Contact Us</h2>
                                 <p class="lead fw-normal mb-5">Get in touch with us for inquiries or project discussions.</p>
                             </div>
-                            <form>
+                            <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                                <input type="hidden" name="form-name" value="contact" />
+                                <input type="hidden" name="method" value="POST" />
                                 <div class="mb-3">
                                     <label for="fullName" class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" id="fullName" placeholder="Your full name" required>
+                                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Your full name" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="subject" class="form-label">Subject</label>
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject of your inquiry" required>
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject of your inquiry" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Your Email</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Your email address" required>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Your email address" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" rows="4" placeholder="Your message" required></textarea>
+                                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your message" required></textarea>
                                 </div>
                                 <div class="mb-3">
                                     <label for="budget" class="form-label">Your Budget for the Project</label>
-                                    <input type="text" class="form-control" id="budget" placeholder="Your budget" required>
+                                    <input type="text" class="form-control" id="budget" name="budget" placeholder="Your budget" required>
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-light btn-lg">Submit</button>
